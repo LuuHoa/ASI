@@ -11,6 +11,10 @@ node{
 	containerName="insure-me"
 	httpPort="8081"
     }
+
+    stage('Test Environment'){
+        echo 'Done Environment'
+    }
     
     stage('Code Checkout'){
         try{

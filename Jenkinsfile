@@ -15,6 +15,7 @@ node{
 	dockerHubUser="khuatdinh"
 	containerName="insure-me"
 	httpPort="8081"
+	echo 'Done Initialize Environment'
     }
 
     stage('Test Environment'){

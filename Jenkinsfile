@@ -3,10 +3,6 @@ node{
     def mavenHome, mavenCMD, docker, tag, dockerHubUser, containerName, httpPort = ""
 
 
-    stage('Start Environment'){
-        echo 'Start Environment'
-    }
-	
     stage('Prepare Environment'){
         echo 'Initialize Environment'
         mavenHome = tool name: 'maven' , type: 'maven'
@@ -15,13 +11,8 @@ node{
 	dockerHubUser="khuatdinh"
 	containerName="insure-me"
 	httpPort="8081"
-	echo 'Done Initialize Environment'
     }
 
-    stage('Test Environment'){
-        echo 'Done Environment'
-    }
-    
     stage('Code Checkout'){
         try{
             checkout scm
